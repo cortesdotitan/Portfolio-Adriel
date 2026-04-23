@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adriel Laurentino | Video Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;700&family=Mr+Dafoe&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+
+
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen w-full flex flex-col items-center overflow-hidden bg-black">
+
+        <!-- Background -->
+        <!-- Background do Hero Blindado -->
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/fotoadriel.png" alt="Adriel Laurentino" 
+     class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale z-0 
+            object-right md:object-[center_10%]">
+            <!-- Overlay de gradiente para garantir leitura no mobile -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black"></div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black z-10"></div>
+
+        <!-- Conteúdo Central -->
+        <div class="relative z-20 flex flex-col items-center justify-center flex-grow w-full px-6 hero-container">
+
+            <!-- Label Superior -->
+            <span class="text-neon font-bold uppercase tracking-[0.4em] text-[10px] md:text-xs mb-4 opacity-70">
+                Video Editor & Content Strategist
+            </span>
+
+            <!-- Bloco PORTFOLIO + EST 2026 -->
+            <div class="relative flex flex-col items-center">
+                <h1 class="text-portfolio">
+                    <span class="text-white">PORT</span><span class="text-neon">FOLIO</span>
+                </h1>
+                <span class="est-tag">EST. 2026</span>
+            </div>
+
+            <!-- Bloco Assinatura -->
+            <div class="signature-wrapper">
+                <h2 class="signature-text">Adriel Laurentino</h2>
+                <!-- Linha Curvada -->
+                <div class="signature-line-container">
+                    <svg viewBox="0 0 500 60" fill="none" class="w-full">
+                        <path d="M10,50 Q250,10 490,50" stroke="#00FF41" stroke-width="2.5" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Frase Premissa -->
+            <p
+                class="mt-12 text-white/40 font-bold uppercase tracking-[0.3em] text-[9px] md:text-xs text-center max-w-[250px] md:max-w-none">
+                O simples bem feito <span class="text-neon">é melhor</span> que o complexo
+            </p>
+        </div>
+
+        <!-- Seta de Scroll Animada -->
+        <a href="#portfolio" class="scroll-indicator z-30">
+            <div class="scroll-circle">
+                <svg class="w-5 h-5 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </a>
+    </section>
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="py-24 bg-zinc-950">
+        <div class="container mx-auto px-6">
+
+            <!-- Cabeçalho da Seção -->
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                <div>
+                    <h2 class="text-5xl font-black uppercase italic tracking-tighter">Projetos Recentes</h2>
+                    <p class="green-glow">Arraste para ver a transformação, clique para poder pausar o display</p>
+                </div>
+                <div class="text-gray-500 text-sm font-mono uppercase tracking-widest">/ Podcast & Reels</div>
+            </div>
+
+            <!-- Grid de Projetos: Responsivo (1 col no mobile, 2 no tablet, 3 no desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+                <!-- PROJETO 1: Menzinho -->
+                <div class="flex flex-col gap-6">
+                    <div class="video-compare-container" class="video-compare-container"
+                        onmousedown="startDragging(event, this)" onmouseup="stopDragging(event, this)"
+                        onmouseleave="stopDragging(event, this)" onmousemove="doMove(event, this)"
+                        ontouchstart="startDragging(event, this)" ontouchend="stopDragging(event, this)"
+                        ontouchmove="doMove(event, this)" onclick="toggleLock(this)">
+                        <img src="menzinhoeditadogif.gif" class="video-after" alt="Vídeo Editado">
+                        <img src="MenzinhoGIFCRU.gif" class="video-before" alt="Vídeo Cru">
+                        <div class="slider-divider" style="left: 50%;"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold uppercase italic text-green-custom">Menzinho (Fausto/Jorginho)
+                        </h4>
+                        <p class="text-gray-400 italic">Aplicação de legendas dinâmicas e correção de cor.</p>
+                    </div>
+                </div>
+
+                <!-- PROJETO 2: Daniel Lopez -->
+                <div class="flex flex-col gap-6">
+                    <div class="video-compare-container" onmousedown="startDragging(event, this)"
+                        onmouseup="stopDragging(event, this)" onmouseleave="stopDragging(event, this)"
+                        onmousemove="doMove(event, this)" ontouchstart="startDragging(event, this)"
+                        ontouchend="stopDragging(event, this)" ontouchmove="doMove(event, this)"
+                        onclick="toggleLock(this)">
+                        <img src="daniellopezeditado.gif" class="video-after" alt="Vídeo Editado">
+                        <img src="daniellopezcru.gif" class="video-before" alt="Vídeo Cru">
+                        <div class="slider-divider" style="left: 50%;"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold uppercase italic text-green-custom">Daniel Lopez</h4>
+                        <p class="text-gray-400 italic">Destaque visual e ritmo de corte acelerado.</p>
+                    </div>
+                </div>
+
+                <!-- PROJETO 3: Daniel Zukerman -->
+                <div class="flex flex-col gap-6">
+                    <div class="video-compare-container" onmousedown="startDragging(event, this)"
+                        onmouseup="stopDragging(event, this)" onmouseleave="stopDragging(event, this)"
+                        onmousemove="doMove(event, this)" ontouchstart="startDragging(event, this)"
+                        ontouchend="stopDragging(event, this)" ontouchmove="doMove(event, this)"
+                        onclick="toggleLock(this)">
+                        <img src="danielzukermaneditado.gif" class="video-after" alt="Vídeo Editado">
+                        <img src="danielzukermancru.gif" class="video-before" alt="Vídeo Cru">
+                        <div class="slider-divider" style="left: 50%;"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold uppercase italic text-green-custom">Daniel Zukerman</h4>
+                        <p class="text-gray-400 italic">Transformação de bruto em conteúdo de alto impacto.</p>
+                    </div>
+                </div>
+
+            </div> <!-- Fim do Grid -->
+        </div>
+    </section>
+
+    <!-- SEÇÃO: CANAIS & RESULTADOS -->
+    <section id="stats" class="py-24 bg-black px-6 overflow-hidden">
+        <div class="container mx-auto max-w-6xl">
+
+            <!-- PARTE 1: CANAIS QUE EU CUIDO -->
+            <div class="mb-32">
+                <div class="flex flex-col mb-12">
+                    <h2 class="text-4xl md:text-6xl font-black uppercase italic italic tracking-tighter">
+                        Canais <span class="text-[#00FF41]">Gerenciados</span>
+                    </h2>
+                    <p class="text-zinc-500 mt-2 uppercase tracking-widest text-xs">Estratégia e Edição Contínua</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Link Instagram -->
+                    <a href="https://www.instagram.com/otitancortes/" target="_blank"
+                        class="social-link-card p-8 rounded-3xl flex items-center justify-between group">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="w-14 h-14 bg-zinc-900 rounded-2xl flex items-center justify-center group-hover:bg-[#00FF41] transition-colors">
+                                <svg class="w-7 h-7 text-white group-hover:text-black" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-xl">@otitancortes</h4>
+                                <p class="text-zinc-500 text-sm">Instagram • Edição de Vídeos Curtos</p>
+                            </div>
+                        </div>
+                        <span class="text-[#00FF41] opacity-0 group-hover:opacity-100 transition-all">VISITAR ↗</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/xavier.defreitass/reels/" target="_blank"
+                        class="social-link-card p-8 rounded-3xl flex items-center justify-between group">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="w-14 h-14 bg-zinc-900 rounded-2xl flex items-center justify-center group-hover:bg-[#00FF41] transition-colors">
+                                <svg class="w-7 h-7 text-white group-hover:text-black" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-xl">@xavier.defreitass</h4>
+                                <p class="text-zinc-500 text-sm">Instagram • Edição de Vídeos Curtos</p>
+                            </div>
+                        </div>
+                        <span class="text-[#00FF41] opacity-0 group-hover:opacity-100 transition-all">VISITAR ↗</span>
+                    </a>
+
+                    <!-- Link YouTube -->
+                    <a href="https://www.youtube.com/@eusouspartano" target="_blank"
+                        class="social-link-card p-8 rounded-3xl flex items-center justify-between group">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="w-14 h-14 bg-zinc-900 rounded-2xl flex items-center justify-center group-hover:bg-[#00FF41] transition-colors">
+                                <svg class="w-7 h-7 text-white group-hover:text-black" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-xl">@eusouspartano</h4>
+                                <p class="text-zinc-500 text-sm">YouTube • Edição de Vídeos Curtos</p>
+                            </div>
+                        </div>
+                        <span class="text-[#00FF41] opacity-0 group-hover:opacity-100 transition-all">VISITAR ↗</span>
+                    </a>
+
+                    <a href="https://www.youtube.com/@FrizzoShorts" target="_blank"
+                        class="social-link-card p-8 rounded-3xl flex items-center justify-between group">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="w-14 h-14 bg-zinc-900 rounded-2xl flex items-center justify-center group-hover:bg-[#00FF41] transition-colors">
+                                <svg class="w-7 h-7 text-white group-hover:text-black" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-xl">@FrizzoShorts</h4>
+                                <p class="text-zinc-500 text-sm">YouTube • Edição de Vídeos Curtos</p>
+                            </div>
+                        </div>
+                        <span class="text-[#00FF41] opacity-0 group-hover:opacity-100 transition-all">VISITAR ↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PARTE 2: PROVA SOCIAL / RESULTADOS (AQUI VAI O SEU PRINT) -->
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+
+                <!-- Texto Lateral -->
+                <div class="lg:col-span-2">
+                    <span class="stat-badge mb-4">High Performance</span>
+                    <h2 class="text-5xl font-black uppercase italic leading-none mb-6">
+                        Números que <br> <span class="text-[#00FF41]">Falam.</span>
+                    </h2>
+                    <p class="text-zinc-400 text-lg mb-8">
+                        Não é apenas sobre "vídeos bonitos", é sobre retenção e alcance. Aqui está o resultado real
+                        aplicado em canais parceiros.
+                    </p>
+                    <div class="flex gap-8">
+                        <div>
+                            <p class="text-3xl font-black text-white">+474k</p>
+                            <p class="text-xs text-zinc-500 uppercase tracking-widest">Views em 20 dias</p>
+                        </div>
+                        <div class="w-[1px] h-12 bg-zinc-800"></div>
+                        <div>
+                            <p class="text-3xl font-black text-white">100%</p>
+                            <p class="text-xs text-zinc-500 uppercase tracking-widest">Orgânico</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- O SEU PRINT -->
+                <div class="lg:col-span-3">
+                    <div class="results-frame overflow-hidden group">
+                        <img src="assets/resultados.jpeg" alt="Métricas de Visualização"
+                            class="w-full h-auto grayscale group-hover:grayscale-0 transition duration-700">
+
+                        <!-- Overlay de legenda interna do print -->
+                        <div
+                            class="absolute bottom-4 right-4 bg-black/80 backdrop-blur-md border border-white/10 p-4 rounded-xl">
+                            <p class="text-white font-bold text-xs">Métrica Real de Cliente</p>
+                            <p class="text-[#00FF41] text-[10px] uppercase font-black">Dash de Performance 2026</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-black px-6">
+        <div class="container mx-auto max-w-6xl">
+
+            <!-- Grid Principal: 1 coluna no mobile, 2 no desktop -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- COLUNA ESQUERDA: Educação e Linguagens -->
+                <div class="flex flex-col gap-8">
+
+                    <!-- EDUCAÇÃO -->
+                    <div class="info-card">
+                        <h3 class="text-2xl font-black mb-8 uppercase tracking-tighter italic text-neon">Educação &
+                            Cursos</h3>
+
+                        <div class="space-y-6">
+                            <div>
+                                <span class="tag-neon">Graduação</span>
+                                <h4 class="text-white font-bold text-lg mt-2">Matemática — UERN</h4>
+                            </div>
+
+                            <div>
+                                <span class="tag-neon">Graduação</span>
+                                <h4 class="text-white font-bold text-lg mt-2">Engenharia de Software</h4>
+                            </div>
+
+                            <div class="pt-4 border-t border-zinc-800">
+                                <p class="text-zinc-500 uppercase text-[10px] tracking-widest font-bold mb-3">Cursos
+                                    Complementares</p>
+                                <ul class="text-zinc-300 space-y-1 font-medium">
+                                    <li>• Informática e Linguagens</li>
+                                    <li>• Inglês Médio</li>
+                                    <li>• Língua Portuguesa</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IDIOMAS (Linguagens) -->
+                    <div class="info-card">
+                        <h3 class="text-2xl font-black mb-8 uppercase tracking-tighter italic">Idiomas</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-white font-bold">Português</span>
+                                    <span class="text-neon">100%</span>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-white font-bold">Inglês</span>
+                                    <span class="text-neon">60%</span>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUNA DIREITA: Expertise, Ferramentas e Hobbies -->
+                <div class="flex flex-col gap-8">
+
+                    <!-- ÁREA DE EXPERTISE -->
+                    <div class="info-card">
+                        <h3 class="text-2xl font-black mb-8 uppercase tracking-tighter italic">Área de Expertise</h3>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div
+                                class="p-4 bg-zinc-900 rounded-2xl border border-zinc-800 hover:border-neon transition">
+                                <span class="text-3xl block mb-2">🎬</span>
+                                <p class="text-white font-bold text-sm">Edição de Vídeo</p>
+                            </div>
+                            <div
+                                class="p-4 bg-zinc-900 rounded-2xl border border-zinc-800 hover:border-neon transition">
+                                <span class="text-3xl block mb-2">🌐</span>
+                                <p class="text-white font-bold text-sm">Criação de Sites - Frontend</p>
+                            </div>
+                        </div>
+
+                        <!-- FERRAMENTAS (Tools) -->
+                        <div class="mt-8">
+                            <p class="text-zinc-500 uppercase text-[10px] tracking-widest font-bold mb-4">Tech Stack</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div class="tool-box">
+                                    <span class="text-neon font-bold">#</span>
+                                    <span class="text-white text-xs font-bold uppercase">CapCut</span>
+                                </div>
+                                <div class="tool-box">
+                                    <span class="text-neon font-bold">#</span>
+                                    <span class="text-white text-xs font-bold uppercase">Figma</span>
+                                </div>
+                                <div class="tool-box">
+                                    <span class="text-neon font-bold">#</span>
+                                    <span class="text-white text-xs font-bold uppercase">VS Code</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HOBBIES -->
+                    <!-- SEÇÃO HOBBIES -->
+                    <div class="info-card">
+                        <h3 class="text-2xl font-black mb-12 uppercase italic tracking-tighter text-white">
+                            Hobbies <span class="text-[#00FF41]">&</span> Interesses
+                        </h3>
+
+                        <!-- Grid de Hobbies -->
+                        <div class="flex flex-wrap justify-around gap-8 md:gap-4">
+
+                            <!-- Hobby 1: Estudar -->
+                            <div class="flex flex-col items-center group">
+                                <div class="hobby-circle">
+                                    <!-- Ícone: Chapéu de Graduação / Estudo -->
+                                    <svg width="32" height="32" fill="none" stroke="black" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 9H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3"></path>
+                                        <path d="M12 15h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3"></path>
+                                        <path
+                                            d="M8 9V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4">
+                                        </path>
+                                        <path d="M11 6v.01"></path>
+                                        <path d="M13 18v.01"></path>
+                                    </svg>
+                                </div>
+                                <span class="hobby-label">Estudar</span>
+                            </div>
+
+                            <!-- Hobby 2: Ler -->
+                            <div class="flex flex-col items-center group">
+                                <div class="hobby-circle">
+                                    <!-- Ícone: Livro -->
+                                    <svg width="32" height="32" fill="none" stroke="black" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 19.003a9 9 0 0 1 9 0 9 9 0 0 1 9 0"></path>
+                                        <path d="M3 6.003a9 9 0 0 1 9 0 9 9 0 0 1 9 0"></path>
+                                        <path d="M3 6v13"></path>
+                                        <path d="M12 6v13"></path>
+                                        <path d="M21 6v13"></path>
+                                    </svg>
+                                </div>
+                                <span class="hobby-label">Ler</span>
+                            </div>
+
+                            <!-- Hobby 3: Produzir -->
+                            <div class="flex flex-col items-center group">
+                                <div class="hobby-circle">
+                                    <!-- Ícone: Lâmpada / Ideia -->
+                                    <svg width="27" height="27" fill="none" stroke="black" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 5v14l12-7L4 5Z"></path>
+                                        <path d="M20 5v14"></path>
+                                    </svg>
+                                </div>
+                                <span class="hobby-label">Produzir</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div> <!-- Fim Direita -->
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="py-20 border-t border-zinc-900 text-center">
+        <p class="text-gray-500 mb-4 tracking-tighter uppercase font-bold">Pronto para elevar seu nível?</p>
+        <h2 class="text-5xl md:text-7xl font-black mb-10">VAMOS CONVERSAR.</h2>
+        <div class="flex justify-center gap-8 green-glow font-black lowcase">
+            <a href="https://wa.me/5584921483806" target="_blank" class="hover:text-white transition">Whatsapp</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
