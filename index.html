@@ -28,9 +28,8 @@
         <!-- Background -->
         <!-- Background do Hero Blindado -->
         <div class="absolute inset-0 z-0">
-            <img src="./assets/fotoadriel.png" alt="Adriel Laurentino" 
-     class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale z-0 
-            object-right md:object-[center_10%]">
+            <img src="./assets/fotoadriel.png" alt="Adriel Laurentino" class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale z-0 
+            object-[82%_25%] md:object-[center_10%]">
             <!-- Overlay de gradiente para garantir leitura no mobile -->
             <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black"></div>
         </div>
@@ -103,8 +102,12 @@
                         onmouseleave="stopDragging(event, this)" onmousemove="doMove(event, this)"
                         ontouchstart="startDragging(event, this)" ontouchend="stopDragging(event, this)"
                         ontouchmove="doMove(event, this)" onclick="toggleLock(this)">
-                        <img src="menzinhoeditadogif.gif" class="video-after" alt="Vídeo Editado">
-                        <img src="MenzinhoGIFCRU.gif" class="video-before" alt="Vídeo Cru">
+                        <video src="assets/menzinhoeditado.mp4" class="video-after" autoplay loop muted
+                            playsinline></video>
+
+                        <!-- VIDEO ANTES (Otimizado MP4) -->
+                        <video src="assets/menzinhocru.mp4" class="video-before" autoplay loop muted
+                            playsinline></video>
                         <div class="slider-divider" style="left: 50%;"></div>
                     </div>
                     <div>
@@ -121,12 +124,16 @@
                         onmousemove="doMove(event, this)" ontouchstart="startDragging(event, this)"
                         ontouchend="stopDragging(event, this)" ontouchmove="doMove(event, this)"
                         onclick="toggleLock(this)">
-                        <img src="daniellopezeditado.gif" class="video-after" alt="Vídeo Editado">
-                        <img src="daniellopezcru.gif" class="video-before" alt="Vídeo Cru">
+                        <video src="assets/danielzukermaneditado.mp4" class="video-after" autoplay loop muted
+                            playsinline></video>
+
+                        <!-- VIDEO ANTES (Otimizado MP4) -->
+                        <video src="assets/danielzukermancru.mp4" class="video-before" autoplay loop muted
+                            playsinline></video>
                         <div class="slider-divider" style="left: 50%;"></div>
                     </div>
                     <div>
-                        <h4 class="text-2xl font-bold uppercase italic text-green-custom">Daniel Lopez</h4>
+                        <h4 class="text-2xl font-bold uppercase italic text-green-custom">Daniel Zukerman</h4>
                         <p class="text-gray-400 italic">Destaque visual e ritmo de corte acelerado.</p>
                     </div>
                 </div>
@@ -138,12 +145,16 @@
                         onmousemove="doMove(event, this)" ontouchstart="startDragging(event, this)"
                         ontouchend="stopDragging(event, this)" ontouchmove="doMove(event, this)"
                         onclick="toggleLock(this)">
-                        <img src="danielzukermaneditado.gif" class="video-after" alt="Vídeo Editado">
-                        <img src="danielzukermancru.gif" class="video-before" alt="Vídeo Cru">
+                        <video src="assets/daniellopezeditado.mp4" class="video-after" autoplay loop muted
+                            playsinline></video>
+
+                        <!-- VIDEO ANTES (Otimizado MP4) -->
+                        <video src="assets/daniellopezcru.mp4" class="video-before" autoplay loop muted
+                            playsinline></video>
                         <div class="slider-divider" style="left: 50%;"></div>
                     </div>
                     <div>
-                        <h4 class="text-2xl font-bold uppercase italic text-green-custom">Daniel Zukerman</h4>
+                        <h4 class="text-2xl font-bold uppercase italic text-green-custom">Daniel Lopez</h4>
                         <p class="text-gray-400 italic">Transformação de bruto em conteúdo de alto impacto.</p>
                     </div>
                 </div>
@@ -460,14 +471,89 @@
             </div>
         </div>
     </section>
+
+    <section class="py-20 bg-[#050505] border-y border-zinc-900 px-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <span class="text-[#00FF41] text-xs-wide font-bold mb-4 block">Next Level</span>
+            <h2 class="title-xl font-black uppercase italic mb-6">
+                PRONTO PARA <span class="text-[#00FF41]">ESCALAR</span> <br class="hidden md:block"> SEU CONTEÚDO?
+            </h2>
+            <p class="text-zinc-500 text-sm md:text-base mb-10 max-w-lg mx-auto leading-relaxed">
+                O próximo vídeo viral pode ser o seu. Vamos alinhar sua estratégia agora.
+            </p>
+            <a href="https://wa.me/5584921483806" target="_blank"
+                class="inline-flex items-center gap-3 bg-[#00FF41] text-black font-black px-8 py-4 rounded-full text-sm md:text-lg hover:scale-105 transition-all shadow-lg">
+                CHAMAR NO WHATSAPP
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </section>
     <!-- FOOTER -->
-    <footer class="py-20 border-t border-zinc-900 text-center">
-        <p class="text-gray-500 mb-4 tracking-tighter uppercase font-bold">Pronto para elevar seu nível?</p>
-        <h2 class="text-5xl md:text-7xl font-black mb-10">VAMOS CONVERSAR.</h2>
-        <div class="flex justify-center gap-8 green-glow font-black lowcase">
-            <a href="https://wa.me/5584921483806" target="_blank" class="hover:text-white transition">Whatsapp</a>
+    <footer class="pt-24 pb-12 bg-black border-t border-zinc-900 overflow-hidden">
+        <div class="container mx-auto px-6">
+
+            <!-- Bloco de Branding Centralizado -->
+            <div class="relative flex flex-col items-center justify-center mb-20">
+                <h2 class="footer-bg-text font-black uppercase opacity-[0.03] text-white">
+                    ADRIEL
+                </h2>
+                <div class="absolute pt-4">
+                    <h3 class="signature-text" style="font-size: clamp(2.5rem, 10vw, 6rem); color: white;">
+                        Laurentino
+                    </h3>
+                </div>
+            </div>
+
+            <!-- Grid de Contato Corrigido -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center border-b border-zinc-900 pb-16 text-center md:text-left">
+
+                <!-- Lado Esquerdo: Contato -->
+                <div class="flex flex-col items-center md:items-start">
+                    <p class="text-zinc-600 text-xs-wide font-bold mb-3">Direct Contact</p>
+                    <a href="https://wa.me/5584921483806" target="_blank"
+                        class="text-xl md:text-3xl font-bold text-white hover:text-[#00FF41] transition-colors italic tracking-tight">
+                        +55 (84) 92148-3806
+                    </a>
+                </div>
+
+                <!-- Lado Direito: Localização -->
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="text-zinc-600 text-xs-wide font-bold mb-3">Location</p>
+                    <p class="text-lg md:text-xl text-white font-medium italic">
+                        Natal, RN <span class="text-zinc-700 mx-2">•</span> Worldwide
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright e Tags -->
+            <div class="flex flex-col md:flex-row justify-between items-center mt-10 gap-6">
+                <p class="text-zinc-700 text-[9px] uppercase tracking-widest font-bold order-2 md:order-1">
+                    © 2026 Adriel Laurentino
+                </p>
+                <div
+                    class="flex gap-6 text-[9px] uppercase tracking-widest font-black text-zinc-500 order-1 md:order-2">
+                    <span class="hover:text-[#00FF41] transition-colors cursor-default">Strategy</span>
+                    <span class="hover:text-[#00FF41] transition-colors cursor-default">Editing</span>
+                    <span class="hover:text-[#00FF41] transition-colors cursor-default">Results</span>
+                </div>
+            </div>
         </div>
     </footer>
+
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5584921483806" target="_blank"
+        class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#00FF41] rounded-full shadow-[0_0_20px_rgba(0,255,65,0.4)] animate-bounce-slow hover:scale-110 transition-transform">
+        <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.445 0 .01 5.437 0 12.045c0 2.112.552 4.175 1.597 6.011L0 24l6.117-1.605a11.782 11.782 0 005.925 1.597h.005c6.605 0 12.04-5.437 12.045-12.045a11.85 11.85 0 00-3.536-8.509z" />
+        </svg>
+    </a>
+
 
     <script src="js/main.js"></script>
 

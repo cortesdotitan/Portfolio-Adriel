@@ -9,6 +9,10 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .green-glow {
     color: #00FF41;
     text-shadow: 0 0 15px rgba(0, 255, 65, 0.6);
@@ -368,6 +372,46 @@ section.relative {
     display: inline-block;
 }
 
+/* Corrigindo o problema das cores de fundo */
+#portfolio {
+    background-color: #09090b !important; /* Forçando Hexadecimal */
+}
+
 #about {
-    background-color: rgb(9 9 11 / var(--tw-bg-opacity, 1));
+    background-color: #000000 !important;
+}
+
+#stats {
+    background-color: #050505 !important;
+}
+
+
+/* Fontes Fluidas e Controladas */
+.title-xl {
+    font-size: clamp(2.2rem, 8vw, 4.5rem); /* Não deixa o texto "estourar" no mobile */
+    line-height: 1.1;
+}
+
+.text-xs-wide {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+/* Footer Background Text Control */
+.footer-bg-text {
+    font-size: clamp(5rem, 25vw, 12rem);
+    line-height: 0.8;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Ajuste do botão flutuante para não cobrir conteúdo importante */
+@media (max-width: 640px) {
+    .floating-wpp {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
 }
